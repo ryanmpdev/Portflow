@@ -10,6 +10,7 @@ header {
     display: flex;
     align-items: center;
     max-width: 1920px;
+    background-color: #ffffff;
 }
 
 .container {
@@ -78,6 +79,10 @@ header nav ul a {
     font-weight: bold;
 }
 
+header nav ul a:hover {
+    text-decoration: underline;
+}
+
 header nav ul a:hover{
     color: black;
 }
@@ -90,7 +95,7 @@ header nav {
 }
 
 .fale-conosco {
-    background-image: url(laranja.png);
+    background-image: url(imagem/laranja.png);
     width: 100%;
     height: 700px;
     background-repeat: no-repeat;
@@ -191,24 +196,12 @@ footer button {
         .navegation {
             display: flex;
             width: 290px;
-            margin-left: 55px;
             align-items: center;
             justify-content: space-around;
         }
 
     }
-    @media (max-width:1200px){
-       
 
-        .navegation {
-            display: flex;
-            width: 290px;
-            margin-left: 50%;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-    }
 
 @media (max-width:950px){
 
@@ -247,19 +240,24 @@ footer button {
 
 }
 
+@media (max-width:720px) {
+    footer {
+        height: 20vh;
+    }
+}
+
 @media (max-width:650px){
     header h1{
         margin-left: 5%;
     }
 
+    .fale-conosco {
+        background-position:right center;
+    }    
 
-.fale-conosco {
-    background-position:right center;
-}    
-
-.fale-conosco p {
-      margin-left:20%;
-}
+    .fale-conosco p {
+        margin-left:20%;
+    }
     .imagine{
         width: 80%;
        align-items:center;
@@ -270,6 +268,12 @@ footer button {
     }
 
 }
+
+@media (max-width:530px) {
+    footer {
+        height: 25vh;
+    }
+   }
 
 @media (max-width:500px){
 
@@ -296,7 +300,7 @@ footer button {
     }
 
    .fale-conosco {
-        background-image: url(laranla-mobile.png);  
+        background-image: url(imagem/laranla-mobile.png);  
         width: 100%;
         height: 600px;
     }
@@ -335,7 +339,6 @@ footer button {
         height:35vh;
         display: flex;
         max-width:1920px;
-        align-items: center;
     }
     
     .redes img {
@@ -382,7 +385,7 @@ footer button {
         margin-top: 3px;
     }
 
-    footer button {
+    .end button {
         display: flex;
         height: 5vh;
         padding:5px;
@@ -396,12 +399,23 @@ footer button {
         font-size: 15px;
         font-weight: bold;
         cursor: pointer;
+        transition-duration: 1s;
     }
+
+    .end button:hover {
+        background-color: rgb(5, 3, 3);
+    }
+
     .end {
         display: flex;
         width: 90%;
         align-items: center;
     }
+    
+    .end a {
+        text-decoration: none;
+    }
+
 }    
 
 @media (max-width:375px) {
@@ -417,6 +431,9 @@ footer button {
          color: white;
         margin-top: 100%;
         margin-left: 0%;
+    }
+    footer {
+        height: 38vh;
     }
 
 }
